@@ -18,7 +18,8 @@ class VotedQuestion extends Component {
                     />
                     <hr style={{margin: '0px', marginLeft: '15px', marginRight: '5px'}}/>
                     <div className='question-info'>
-                        <h2  style={{margin: '0px'}}>Results</h2><br />
+                        <h2  style={{margin: '0px'}}>Results</h2>
+                        <h4 style={{margin: '0px'}}>Would you rather</h4><br />
                         <div className={question.voted_answer === 'one' ? 'checked' : 'unchecked'}>
                             <h4>{question.optionOne.text}</h4><br />
                             <progress max="100" value={(question.voteOne / (question.voteOne + question.voteTwo) * 100)}>

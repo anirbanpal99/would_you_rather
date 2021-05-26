@@ -40,8 +40,7 @@ class Nav extends Component {
                         </label>
                     </li>
                     <li>
-                        <button className='logout' style={{textDecoration: 'none', color: 'black', textAlign: 'center'}} onClick={this.handleLogout}>
-                            <Redirect to='/'/>
+                        <button className='logout' style={{textDecoration: 'none', color: 'black', textAlign: 'center', paddingRight: '10%'}} onClick={this.handleLogout}>
                             Logout
                         </button>
                     </li>

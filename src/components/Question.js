@@ -22,10 +22,8 @@ class Question extends Component {
                         <div className='question-info'>
                             <h5  style={{margin: '0px'}}>Would you rather</h5><br />
                             <span>...{question.optionOne.text}...</span> <br />
-                            <Link to={`/question/${question.id}`} className="poll-view">
-                                {/* <button className='btn'> */}
+                            <Link to={`/questions/${question.id}`} className="poll-view">
                                     View Poll
-                                {/* </button> */}
                             </Link>
                         </div>
                     </div>

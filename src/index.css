@@ -414,3 +414,25 @@ progress::-webkit-progress-value {
 .login-btn:disabled {
   cursor: not-allowed;
 }
+
+.not-found {
+  text-align: center;
+}
+
+.not-found p {
+  margin-top: 10%;
+  font-size: 80px;
+  color: #ff4d4d;
+}
+
+.back {
+  text-decoration: none;
+  color: #2e8b57;
+  background-color: #d9d9d9;
+  border-radius: 3px;
+  font-size: 1.2em;
+  padding-left: 0.2em;
+  padding-right: 0.3em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+}

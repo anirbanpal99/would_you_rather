@@ -4,6 +4,7 @@ import { formatQuestion } from '../utils/helpers'
 import VotedQuestion from './VotedQuestion'
 import { handleSaveQuestionAnswer } from '../actions/users'
 import UnansweredQuestion from './UnansweredQuestion'
+import { Redirect } from 'react-router'
 
 class QuestionPage extends Component {
 
@@ -15,9 +16,11 @@ class QuestionPage extends Component {
     }
 
     render() {
-        const { question, user } = this.props
+        const { id, question, user, questionIds } = this.props
 
         return (
+            questionIds.includes(id) 
+            ?
             <div className="single-question">
                 {
                     question.length !== 0 &&
@@ -32,6 +35,7 @@ class QuestionPage extends Component {
                         <VotedQuestion question={question} user={user}/>
                 }
             </div>
+            : <Redirect to='/error'/>
         )
     }
 }
@@ -49,7 +53,8 @@ function mapStateToProps ({authedUser, questions, users}, props) {
         question,
         authedUser,
         user: users[authedUser],
-        originalQuestion
+        originalQuestion,
+        questionIds: Object.keys(questions)
     }
 }
 
