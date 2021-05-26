@@ -10,7 +10,6 @@ import QuestionPage from './QuestionPage';
 import Login from './Login';
 import LoadingBar from 'react-redux-loading'
 import NotFound from './NotFound';
-import { Redirect  } from 'react-router';
 
 class App extends Component {
 
